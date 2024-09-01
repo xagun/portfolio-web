@@ -19,9 +19,10 @@
                 transform: rotate(360deg);
             }
         }
+  
 
         .rotate-animation {
-            animation: rotate 10s linear infinite;
+            animation: rotate 20s linear infinite;
         }
 
 
@@ -82,9 +83,9 @@
 </head>
 
 <body class="is-preload bg-white text-black">
-    <div class="h-[100vh] p-8">
+    <div class="md:h-[100vh] p-10 md:p-8 ">
         <main class="flex justify-between h-full">
-            <aside class="w-1/5 flex justify-between flex-col">
+            <aside class="w-1/5 justify-between flex-col hidden md:flex">
                 <h1 class="font-semibold text-[28px]">Sagun</h1>
 
                 <nav class="space-y-10">
@@ -103,9 +104,12 @@
                 </div>
             </aside>
 
-            <div class="w-4/5 flex items-center gap-40">
+
+
+
+            <div class="w-full md:w-4/5 flex items-center justify-center gap-20 md:gap-40 flex-col md:flex-row mt-20 md:mt-0 ">
                 <!-- Profile Section -->
-                <section class="relative flex items-center justify-center w-[300px] h-[300px]">
+                <section class="relative flex items-center justify-center w-[200px] h-[200px] md:w-[300px] md:h-[300px]">
                     <!-- Rotating Circle with Icons -->
                     <div
                         class="absolute w-[280px] h-[280px] rounded-full rotate-animation flex items-center justify-center">
@@ -121,7 +125,7 @@
                         class="w-40 h-40 rounded-full z-10 filter grayscale ">
                 </section>
 
-                <div class="w-[80%]">
+                <div class="w-full md:w-[80%]">
                     <p class="text-xl">Hello, I am</p>
                     <h2 class="text-6xl font-bold my-4">Sagun Shrestha</h2>
                     <p class="text-4xl font-thin text-black mb-8 ">I am a passionate frontend developer with keen
