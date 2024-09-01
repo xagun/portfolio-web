@@ -3,62 +3,146 @@
 <html>
 
 <head>
-  <title>Sagun Shrestha</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Sagun Shrestha</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <script src="https://kit.fontawesome.com/816d07d3fa.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .rotate-animation {
+            animation: rotate 10s linear infinite;
+        }
+
+
+        @keyframes border-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        @keyframes border-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .animated-border {
+            position: relative;
+            background: linear-gradient(270deg, #ff0080, #ff8c00, #40e0d0, #ff0080);
+            /* background: linear-gradient(270deg, #ff0080, #ff8c00, #40e0d0, #ff0080); */
+            background-size: 600% 600%;
+            border-radius: 9999px;
+            /* Full-rounded */
+            padding: 1px;
+            /* Thin padding to create border effect */
+            animation: border-animation 8s ease infinite;
+            /* Longer duration and ease for smoothness */
+        }
+
+        .animated-border a {
+            display: block;
+            background-color: black;
+            padding: 10px 20px;
+            border-radius: 9999px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .animated-border a:hover {
+            background-color: #333;
+        }
+    </style>
+
+
 </head>
 
-<body class="is-preload bg-white text-black"">
-  <header class=" flex justify-between items-center p-6">
-  <h1 class="text-3xl font-bold">Saïd_</h1>
-  <a href="#" class="bg-black text-white py-2 px-4 rounded">Hire me</a>
-  </header>
+<body class="is-preload bg-white text-black">
+    <div class="h-[100vh] p-8">
+        <main class="flex justify-between h-full">
+            <aside class="w-1/5 flex justify-between flex-col">
+                <h1 class="font-semibold text-[28px]">Sagun</h1>
 
-  <main class="flex justify-between p-8">
-    <aside class="w-1/5">
-      <nav class="space-y-6">
-        <a href="#" class="block text-xl hover:underline">About me</a>
-        <a href="#" class="block text-xl hover:underline">Skills</a>
-        <a href="#" class="block text-xl hover:underline">Experiences</a>
-        <a href="#" class="block text-xl hover:underline">Education</a>
-      </nav>
-      <div class="mt-8 flex space-x-4">
-        <a href="#"><img src="github.png" alt="GitHub" class="w-8 h-8"></a>
-        <a href="#"><img src="linkedin.png" alt="LinkedIn" class="w-8 h-8"></a>
-        <a href="#"><img src="twitter.png" alt="Twitter" class="w-8 h-8"></a>
-        <a href="#"><img src="mail.png" alt="Email" class="w-8 h-8"></a>
-      </div>
-    </aside>
+                <nav class="space-y-10">
+                    <a href="#" class="block text-xl hover:underline">About me</a>
+                    <a href="#" class="block text-xl hover:underline">Skills</a>
+                    <a href="#" class="block text-xl hover:underline">Experiences</a>
+                    <a href="#" class="block text-xl hover:underline">Education</a>
+                </nav>
+                <div class="mt-8 flex space-x-4">
 
-    <section class="w-4/5 flex justify-between items-center">
-      <div>
-        <p class="text-xl">Hello, I am</p>
-        <h2 class="text-6xl font-bold my-4">Sagun Shrestha</h2>
-        <p class="text-lg text-gray-600 mb-8">Full-Stack Developer with expertise in both front-end and
-          back-end technologies.</p>
-        <div class="space-x-4">
-          <a href="#" class="bg-black text-white py-2 px-4 rounded">Hire me</a>
-          <a href="#" class="bg-black text-white py-2 px-4 rounded">Contact me</a>
-        </div>
-      </div>
-      <div>
-        <img src="profile.jpg" alt="Profile Picture" class="rounded-full w-40 h-40">
-      </div>
-    </section>
-  </main>
+                    <i class="fa-brands fa-github text-3xl"></i>
+                    <i class="fa-brands fa-facebook text-3xl"></i>
+                    <i class="fa-brands fa-linkedin text-3xl"></i>
+                    <i class="fa-brands fa-instagram text-3xl"></i>
 
-  <!-- Scripts -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/jquery.scrollex.min.js"></script>
-  <script src="assets/js/jquery.scrolly.min.js"></script>
-  <script src="assets/js/browser.min.js"></script>
-  <script src="assets/js/breakpoints.min.js"></script>
-  <script src="assets/js/util.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/animations.js"></script>
+                </div>
+            </aside>
+
+            <div class="w-4/5 flex items-center gap-40">
+                <!-- Profile Section -->
+                <section class="relative flex items-center justify-center w-[300px] h-[300px]">
+                    <!-- Rotating Circle with Icons -->
+                    <div
+                        class="absolute w-[280px] h-[280px] rounded-full rotate-animation flex items-center justify-center">
+                        <div class="absolute w-full h-full border-4 border-dotted border-gray-300 rounded-full"></div>
+
+                        <i class="fa-solid fa-code absolute left-[-40px] text-4xl bg-gray-100 p-4 rounded-full"></i>
+                        <i class="fa-brands fa-js absolute right-[-40px] text-4xl bg-gray-100 p-4 rounded-full"></i>
+
+                    </div>
+
+                    <!-- Profile Picture -->
+                    <img src="./assets/images/photo.jpg" alt="Profile Picture"
+                        class="w-40 h-40 rounded-full z-10 filter grayscale ">
+                </section>
+
+                <div class="w-[80%]">
+                    <p class="text-xl">Hello, I am</p>
+                    <h2 class="text-6xl font-bold my-4">Sagun Shrestha</h2>
+                    <p class="text-4xl font-thin text-black mb-8 ">I am a passionate frontend developer with keen
+                        interest in backend development as well as mobile app development.</p>
+                    <div class="space-x-4 flex">
+                        <div class="animated-border">
+                            <a href="#" class="block text-white rounded-full">Hire me</a>
+                        </div>
+
+                        <div class="animated-border">
+                            <a href="#" class="block text-white rounded-full">Contact me</a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </main>
+
+    </div>
 </body>
 
 </html>
